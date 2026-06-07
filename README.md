@@ -37,6 +37,17 @@ python3 get-switch-screenshots.py
 
 That's it. If `gphoto2` isn't installed yet, the script asks to install it for you. Your screenshots and clips land in `~/switch-screenshots/`.
 
+### Or with breach
+
+If you've cloned the repo, it's wired for [`breach`](https://github.com/radical-beard/breach):
+
+```bash
+breach setup     # install gphoto2
+breach run       # transfer new screenshots/clips
+breach list      # list what's on the console
+breach preview   # show what would transfer, download nothing
+```
+
 ## On the console (do this first)
 
 1. Open **Settings → Data Management → Manage Screenshots and Videos → Copy to PC over USB**.

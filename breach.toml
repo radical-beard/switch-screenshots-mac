@@ -1,0 +1,21 @@
+kind = "root"
+name = "switch-screenshots"
+aliases = ["switch"]
+
+# One-shot USB transfer tool — no long-running service, so just setup + run.
+
+[commands.setup]
+description = "Install dependencies (gphoto2 via Homebrew)"
+plugin = ["scripts/setup.sh"]
+
+[commands.run]
+description = "Transfer new Switch screenshots/clips into ~/switch-screenshots/ (safe to re-run)"
+plugin = ["get-switch-screenshots.py"]
+
+[commands.list]
+description = "List what's on the console without transferring"
+plugin = ["get-switch-screenshots.py", "--list"]
+
+[commands.preview]
+description = "Show what would transfer, download nothing"
+plugin = ["get-switch-screenshots.py", "--dry-run"]
